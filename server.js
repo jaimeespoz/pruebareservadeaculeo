@@ -24,13 +24,13 @@ app.set('port', process.env.PORT);
 // Middleware
 // Tell express to use the webpack-dev-middleware and use the webpack.config.js
 // configuration file as a base.
-// app.use(
-//     webpackDevMiddleware(compiler, {
-//         publicPath: config.output.publicPath,
-//     })
-// )
-// .use(morgan('dev'))
-app.use(express.urlencoded({ extended: false }))
+app.use(
+    webpackDevMiddleware(compiler, {
+        publicPath: config.output.publicPath,
+    })
+)
+    // .use(morgan('dev'))
+    .use(express.urlencoded({ extended: false }))
     .use(express.json())
     .use(cors());
 

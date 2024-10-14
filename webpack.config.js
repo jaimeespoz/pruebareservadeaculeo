@@ -23,10 +23,7 @@ module.exports = {
     mode: process.env.NODE_ENV,
 
     entry: {
-        home: './src/home/home.js',
-        quienes_somos: './src/quienes_somos/quienes_somos.js',
-        login: './src/login/login.js',
-        contactenos: './src/contactenos/contactenos.js',
+        home: './src/views/home.js',
     },
 
     output: {
@@ -61,7 +58,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/home/home.html',
+            template: './src/views/home.html',
             chunks: ['home'],
             filename: 'home.html',
             minify: {
